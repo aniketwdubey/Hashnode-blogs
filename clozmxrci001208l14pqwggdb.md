@@ -5,7 +5,8 @@ seoDescription: "A Comprehensive Guide to Mass Emailing Using Serverless Archite
 datePublished: Wed Nov 15 2023 10:44:24 GMT+0000 (Coordinated Universal Time)
 cuid: clozmxrci001208l14pqwggdb
 slug: building-scalable-email-automation-with-aws-lambda-ses-and-s3
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1706614256060/9c92e752-ae05-4d2e-b328-8b17eb515df0.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706614335346/73d1b3f0-14d5-4ef1-ad80-b9a977211341.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1706614383307/be717163-a3d9-4634-9377-66b44cfa6d28.jpeg
 tags: cloud, aws, amazon-web-services, serverless, aws-lambda
 
 ---
