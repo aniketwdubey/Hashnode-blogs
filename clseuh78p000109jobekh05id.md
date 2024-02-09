@@ -106,6 +106,8 @@ Users can update and delete the posts and comments as well!
 2. Access the GraphQL endpoint at [`http://localhost:8000/graphql/`](http://localhost:8000/graphql/) to interact with the API.
     
 
+## 3\. CRUD Operations using GraphQL API
+
 ▪︎ query posts
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707493753405/69fb7727-7611-4e50-a91b-95b5dabc0ceb.png align="center")
@@ -152,6 +154,6 @@ You can see 2 comment on post with postId:13
 
 ▪︎ You can update, delete the comments as well!
 
-## **3\. Conclusion**
+## **4\. Conclusion**
 
 Building a blogging GraphQL API with Django and Strawberry is a straightforward process that provides a flexible and efficient solution for creating and managing blog content. With MyBlogProject as a starting point, you can extend and customize the functionality to suit your specific requirements.
