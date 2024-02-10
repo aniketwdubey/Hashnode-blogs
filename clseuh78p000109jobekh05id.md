@@ -5,7 +5,8 @@ seoDescription: "GraphQL API for managing a book database using Django and Straw
 datePublished: Fri Feb 09 2024 16:11:08 GMT+0000 (Coordinated Universal Time)
 cuid: clseuh78p000109jobekh05id
 slug: building-a-simple-blogging-graphql-api-with-django-and-strawberry
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1707494712071/67b9d25f-eb9e-4a90-9edc-12ee21828a0a.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1707582685686/01addc28-fc5f-4ba3-b8bf-e879290e1271.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1707582706432/549213ce-f593-403a-84f9-80fce3e4a0fd.png
 tags: django, apis, graphql, rest-api, strawberry
 
 ---
