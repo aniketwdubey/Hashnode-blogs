@@ -151,7 +151,7 @@ As you can see the title for post with postId:13 is updated.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707494258699/781bfb6d-0e9b-47fa-bafa-b21a72ee9550.png align="center")
 
-You can see 2 comment on post with postId:13
+You can see 2 comments on post with postId:13
 
 ▪︎ You can update, delete the comments as well!
 
