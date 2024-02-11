@@ -65,7 +65,7 @@ Users can update and delete the posts and comments as well!
 3. Create a virtual environment:
     
     ```bash
-    python -m venv venv
+    python -m venv
     ```
     
 4. Activate the virtual environment:
