@@ -15,7 +15,7 @@ tags: django, apis, graphql, rest-api, graphql-api, strawberry
 
 GraphQL is a query language for APIs that enables clients to request only the data they need and nothing more. Unlike traditional REST APIs, where clients are often constrained by the fixed structure of the responses, GraphQL allows clients to specify the shape of the response they require, empowering them with more flexibility and efficiency.
 
-With GraphQL, clients can send queries to the server specifying exactly which fields they want to retrieve, eliminating over-fetching and under-fetching of data. This declarative approach to data fetching results in more efficient network usage and faster response times, making GraphQL an ideal choice for building modern APIs.
+With GraphQL, clients can send queries to the server specifying exactly which fields they want to retrieve, **eliminating over-fetching and under-fetching of data**. This declarative approach to data fetching results in more efficient network usage and faster response times, making GraphQL an ideal choice for building modern APIs.
 
 ## **Introduction**
 
