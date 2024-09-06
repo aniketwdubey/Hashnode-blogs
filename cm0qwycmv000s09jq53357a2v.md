@@ -10,8 +10,8 @@ tags: cloud, aws, technology, opensource, kubernetes, developer, devops, amazon-
 
 ## Brief overview of Karpenter
 
-Karpenter is an open-source node provisioning project that automatically launches just the right compute resources to handle your Kubernetes cluster's applications. This guide will walk you through the process of setting up Karpenter on an existing Amazon EKS cluster.  
-  
+Karpenter is an open-source node provisioning project that automatically launches just the right compute resources to handle your Kubernetes cluster's applications. This guide will walk you through the process of setting up Karpenter on an existing Amazon EKS cluster.
+
 It's designed to improve the efficiency and cost of running workloads on Kubernetes by:
 
 * **Just-in-Time Provisioning**: Karpenter can rapidly launch nodes in response to pending pods, often in seconds.
@@ -78,7 +78,7 @@ Make sure to replace &lt;your cluster name&gt; with your actual EKS cluster name
 
 [Create an IAM OIDC provider](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html) for your cluster
 
-## 2\. Set Up IAM Roles and Policies
+## 3\. Set Up IAM Roles and Policies
 
 Set up the necessary permissions for Karpenter to interact with AWS services. This includes a role for Karpenter-provisioned nodes and a role for the Karpenter controller itself.
 
@@ -102,10 +102,10 @@ From the terrrafrom script, you will create 2 IAM Roles:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1725635087032/0fa5de96-b618-49fe-9266-038298722d52.png align="center")
 
-## 3\. Tag Subnets and Security Groups
+## 4\. Tag Subnets and Security Groups
 
-After applying the Terraform configuration, tag the subnets and security groups to enable Karpenter to discover and use the appropriate subnets and security groups when provisioning new nodes.  
-  
+After applying the Terraform configuration, tag the subnets and security groups to enable Karpenter to discover and use the appropriate subnets and security groups when provisioning new nodes.
+
 Use the following AWS CLI commands to tag the relevant resources:
 
 ```bash
@@ -138,7 +138,7 @@ aws ec2 create-tags \
     --resources "${SECURITY_GROUPS}"
 ```
 
-## 4\. Update aws-auth ConfigMap
+## 5\. Update aws-auth ConfigMap
 
 Update aws-auth ConfigMap to allow nodes created by Karpenter to join the EKS cluster by granting the necessary permissions to the Karpenter node IAM role.
 
@@ -158,7 +158,7 @@ Add the following section to the mapRoles:
 
 Replace ${AWS\_PARTITION}, ${AWS\_ACCOUNT\_ID}, and ${CLUSTER\_NAME} with your actual values.
 
-## 5\. Deploy Karpenter
+## 6\. Deploy Karpenter
 
 Install the Karpenter controller and its associated resources in the cluster, configuring it to work with your specific EKS setup.
 
@@ -174,7 +174,7 @@ helm template karpenter oci://public.ecr.aws/karpenter/karpenter --version "${KA
     --set controller.resources.limits.memory=1Gi > karpenter.yaml
 ```
 
-### 5.1 Set Node Affinity for Karpenter
+### 6.1 Set Node Affinity for Karpenter
 
 Ensure Karpenter runs on existing node group nodes, maintaining high availability and preventing it from scheduling itself on nodes it manages.
 
@@ -199,7 +199,7 @@ affinity:
 
 Replace ${NODEGROUP} with your actual node group name.
 
-### 5.2: Apply Karpenter Configuration
+### 6.2: Apply Karpenter Configuration
 
 ```bash
 Apply the Karpenter configuration:kubectl create namespace "${KARPENTER_NAMESPACE}" || true
@@ -212,7 +212,7 @@ kubectl create -f \
 kubectl apply -f karpenter.yaml
 ```
 
-## 6\. Create NodePool
+## 7\. Create NodePool
 
 Define the default configuration for nodes that Karpenter will provision, including instance types, capacity type, and other constraints.
 
@@ -279,7 +279,7 @@ spec:
 kubectl apply -f nodepool.yaml
 ```
 
-## 7\. Testing the Setup - Deploy Sample Application
+## 8\. Testing the Setup - Deploy Sample Application
 
 To test Karpenter's autoscaling capabilities, we'll deploy a sample application called "inflate". This application creates pods that consume resources, triggering Karpenter to provision new nodes as needed.
 
