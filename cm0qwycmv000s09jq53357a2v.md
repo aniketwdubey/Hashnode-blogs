@@ -3,7 +3,7 @@ title: "Karpenter Setup on Existing EKS cluster"
 datePublished: Fri Sep 06 2024 16:11:21 GMT+0000 (Coordinated Universal Time)
 cuid: cm0qwycmv000s09jq53357a2v
 slug: karpenter-setup-on-existing-eks-cluster
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1725661038254/a4ed3b5a-b7f1-423a-acd0-f9e8fb40c884.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1725661311298/751b24b0-9cd8-4f36-a793-e7fa1f4af8c3.png
 tags: cloud, aws, technology, opensource, kubernetes, developer, devops, amazon-web-services, terraform, devsecops, cncf, karpenter, open-source, hashicorp, hcl
 
 ---
