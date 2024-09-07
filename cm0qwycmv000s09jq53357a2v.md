@@ -1,9 +1,12 @@
 ---
 title: "Karpenter Setup on Existing EKS cluster"
+seoTitle: "Karpenter Setup on Existing EKS cluster"
+seoDescription: "Optimizing Kubernetes Node Management: A Hands-On Guide to Karpenter on Amazon EKS"
 datePublished: Fri Sep 06 2024 16:11:21 GMT+0000 (Coordinated Universal Time)
 cuid: cm0qwycmv000s09jq53357a2v
 slug: karpenter-setup-on-existing-eks-cluster
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1725661311298/751b24b0-9cd8-4f36-a793-e7fa1f4af8c3.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1725709172845/506805ef-87e3-4404-abb2-1f3e52161ddd.png
 tags: cloud, aws, technology, opensource, kubernetes, developer, devops, amazon-web-services, terraform, devsecops, cncf, karpenter, open-source, hashicorp, hcl
 
 ---
@@ -12,7 +15,7 @@ tags: cloud, aws, technology, opensource, kubernetes, developer, devops, amazon-
 
 Karpenter is an open-source node provisioning project that automatically launches just the right compute resources to handle your Kubernetes cluster's applications. This guide will walk you through the process of setting up Karpenter on an existing Amazon EKS cluster.
 
-It's designed to improve the efficiency and cost of running workloads on Kubernetes by:
+Karpenter is designed to improve the efficiency and cost of running workloads on Kubernetes by:
 
 * **Just-in-Time Provisioning**: Karpenter can rapidly launch nodes in response to pending pods, often in seconds.
     
