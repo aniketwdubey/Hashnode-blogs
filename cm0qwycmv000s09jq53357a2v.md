@@ -183,7 +183,7 @@ Ensure Karpenter runs on existing node group nodes, maintaining high availabilit
 
 Edit the `karpenter.yaml` file to set node affinity:
 
-```bash
+```yaml
 affinity:
   nodeAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
@@ -205,7 +205,7 @@ Replace ${NODEGROUP} with your actual node group name.
 ### 6.2: Apply Karpenter Configuration
 
 ```bash
-Apply the Karpenter configuration:kubectl create namespace "${KARPENTER_NAMESPACE}" || true
+kubectl create namespace "${KARPENTER_NAMESPACE}" || true
 kubectl create -f \
     "https://raw.githubusercontent.com/aws/karpenter-provider-aws/v${KARPENTER_VERSION}/pkg/apis/crds/karpenter.sh_nodepools.yaml"
 kubectl create -f \
