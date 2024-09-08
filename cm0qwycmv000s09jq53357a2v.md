@@ -351,6 +351,10 @@ kubectl delete -f inflate.yaml
 
 And you will see the node which was created will be deleted.
 
+## Code Repository
+
+[https://github.com/aniketwdubey/Karpenter-on-Existing-EKS-Cluster](https://github.com/aniketwdubey/Karpenter-on-Existing-EKS-Cluster)
+
 ## References and Resources
 
 ▪︎ [https://karpenter.sh/docs/getting-started/migrating-from-cas/](https://karpenter.sh/docs/getting-started/migrating-from-cas/)
