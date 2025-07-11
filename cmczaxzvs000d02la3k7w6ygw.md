@@ -1,7 +1,7 @@
 ---
 title: "Securing GKE with Let's Encrypt Wildcard Certificates via GoDaddy DNS and cert-manager"
 seoTitle: "Secure GKE with Let's Encrypt Wildcard SSL via GoDaddy & cert-manager"
-seoDescription: "Learn how to secure your GKE applications with Let's Encrypt wildcard SSL certificates using cert-manager and GoDaddy DNS automation. Full production-grade "
+seoDescription: "Learn how to secure your GKE applications with Let's Encrypt wildcard SSL certificates using cert-manager and GoDaddy DNS automation. Full production-grade"
 datePublished: Fri Jul 11 2025 21:01:36 GMT+0000 (Coordinated Universal Time)
 cuid: cmczaxzvs000d02la3k7w6ygw
 slug: securing-gke-with-lets-encrypt-wildcard-certificates-via-godaddy-dns-and-cert-manager
@@ -144,10 +144,10 @@ spec:
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer
-  commonName: '*.staging.yourdomain.com'
+  commonName: '*.yourdomain.com'
   dnsNames:
-  - '*.staging.yourdomain.com'
-  - 'staging.yourdomain.com'
+  - '*.yourdomain.com'
+  - 'yourdomain.com'
 ```
 
 Apply it:
@@ -174,7 +174,7 @@ Check for: `Status: Ready=True`
 
 To ensure your domain and subdomains point to your GKE Ingress:
 
-### Option A: Wildcard record (recommended)
+### Option A: Wildcard record
 
 ```bash
 *.yourdomain.com     A     <GKE LoadBalancer IP>
@@ -242,7 +242,7 @@ kubectl get secret example-staging-wildcard-tls -n example -o jsonpath='{.data.t
 
 ## You're Done!
 
-You can now serve HTTPS traffic on any subdomain under `staging.yourdomain.com` securely, backed by Let's Encrypt certificates managed automatically by cert-manager.
+You can now serve HTTPS traffic on any subdomain under `example.yourdomain.com` securely, backed by Let's Encrypt certificates managed automatically by cert-manager.
 
 This setup ensures:
 
